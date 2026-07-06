@@ -1,4 +1,12 @@
 def validate_duplicate_rows(df):
 
-    duplicate_rows = df.
+    total_rows = df.count()
+
+    unique_rows = df.dropDuplicates().count()
+
+    duplicate_rows = total_rows - unique_rows
+
+    print(f"Duplicate rows: {duplicate_rows}")
+
+    return df
 
