@@ -1,7 +1,7 @@
 customer_id,first_name,last_name,gender,email,phone,address,city,state,signup_date
-1,Jeffrey,Lowery,F,jackiewhitney@example.net,787-636-7110x20974,"38566 Ward Knolls,East Lisa, MN 66003",East Barbara,Delaware,2023-08-21
+1,Jeffrey,Lowery,F,jackiewhitneyexample.net,787-636-7110x20974,"38566 Ward Knolls,East Lisa, MN 66003",East Barbara,Delaware,2023-08-21
 2,Barbara,Payne,F,kristireese@example.net,001-361-931-9981x0788,"10704 Henry Trail,Williamsport, VA 79331",West Jeremiahshire,Maryland,2024-07-08
-3,Nicholas,Smith,F,bbrown@example.net,(684)448-7859x44764,"Unit 0004 Box 9252,DPO AP 09051",Stephanieberg,Virginia,2025-03-07
+3,Nicholas,Smith,F,bbrown@examplenet,(684)448-7859x44764,"Unit 0004 Box 9252,DPO AP 09051",Stephanieberg,Virginia,2025-03-07
 4,Elizabeth,,F,dharrison@example.net,(237)383-6355x3106,"647 Miles Ridge Apt. 960,Nguyentown, DE 91712",Ramirezport,Washington,2023-12-03
 5,Christopher,Townsend,M,,480.435.8497x905,"2553 Wilson Gardens,Santiagoside, DE 97957",Lefort,New York,2025-12-02
 6,Michael,Sherman,F,brendarandall@example.net,664.240.6601x978,"62556 Dennis Glens,Tiffanyville, WV 81200",Meaganton,Nevada,2023-10-04
