@@ -5,14 +5,14 @@ def validate_emails(df, email_column):
 
     spark = get_spark_session()
 
+    emails = df.select(email_column).collect()
+
     invalid_rows = []
 
-    for index, email in enumerate(df[email_column]):
+    for index, row in enumerate(emails):
+        email = row[email_column]
 
-        if df.select([
-        count(
-            when(col(email_column).isNull(), email_column)
-        ).alias(email_column)]):
+        if email is None:
             
             invalid_rows.append(index)
 

@@ -22,6 +22,8 @@ CUSTOMER_SCHEMA = [
 ]
 spark = get_spark_session()
 customer_df = read_csv(spark, "data/raw/customers.csv")
+product_df = read_csv(spark, "data/raw/products.csv")
+
 # print_schema(customer_df)
 # print(f"spark version : {spark.version}")
 # print(show_columns(customer_df))
@@ -31,9 +33,9 @@ customer_df = read_csv(spark, "data/raw/customers.csv")
 # print(validate_missing_values(customer_df))
 
 # print(validate_duplicate_rows(customer_df))
-print(validate_duplicate_primary_keys(customer_df, "customer_id"))
+# print(validate_duplicate_primary_keys(customer_df, "customer_id"))
 # print(count_rows(customer_df))
-# validate_emails(customer_df, "email")
+validate_emails(customer_df, "email")
 # lazy_evaluation_demo(customer_df)
 # validate_schema(customer_df, CUSTOMER_SCHEMA)
 spark.stop()
