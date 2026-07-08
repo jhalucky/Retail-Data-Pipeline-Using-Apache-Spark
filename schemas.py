@@ -41,3 +41,22 @@ PAYMENT_SCHEMA = {
     "payment_date" : "date"
 
 }
+
+FACT_SALES_COLUMNS = [
+        "order_id",
+        "order_date",
+        "customer_id",
+        "first_name",
+        "last_name",
+        "city",
+        "state",
+        "product_id",
+        "product_name",
+        "category",
+        "brand",
+        "quantity",
+        "unit_price",
+        "sales_amount",
+        "payment_method",
+        "payment_status"
+]

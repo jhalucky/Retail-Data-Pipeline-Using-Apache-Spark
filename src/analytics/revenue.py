@@ -7,7 +7,7 @@ def revenue_by_category(df):
     revenue_df = (
         df.groupBy("category")
         .agg(
-            sum("total_amount").alias("total_revenue")
+            sum("sales_amount").alias("total_revenue")
         )
         .orderBy(desc("total_revenue"))
     )
@@ -24,7 +24,7 @@ def revenue_by_state(df):
     revenue_df = (
         df.groupBy("state")
         .agg(
-            sum("total_amount").alias("total_revenue")
+            sum("sales_amount").alias("total_revenue")
         )
         .orderBy(desc("total_revenue"))
     )
@@ -40,7 +40,7 @@ def revenue_by_month(df):
             month("order_date").alias("month")
         )
         .agg(
-            sum("total_amount").alias("total_revenue")
+            sum("sales_amount").alias("total_revenue")
         )
         .orderBy("year", "month")
     )

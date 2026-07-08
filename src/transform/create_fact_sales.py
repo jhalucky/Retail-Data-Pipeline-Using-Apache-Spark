@@ -1,4 +1,5 @@
 from pyspark.sql.functions import col 
+from schemas import FACT_SALES_COLUMNS
 
 
 def create_fact_sales(df):
@@ -8,24 +9,8 @@ def create_fact_sales(df):
         col("quantity") * col("unit_price")
     )
 
-    df = df.select(
-        "order_id",
-        "order_date",
-        "customer_id",
-        "first_name",
-        "last_name",
-        "city",
-        "state",
-        "product_id",
-        "product_name",
-        "category",
-        "brand",
-        "quantity",
-        "unit_price",
-        "sales_amount",
-        "payment_method",
-        "payment_status"
-    )
+    df = df.select(*FACT_SALES_COLUMNS)
+    
 
 
     return df
