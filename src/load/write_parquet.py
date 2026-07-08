@@ -5,3 +5,5 @@ def write_parquet(df, output_path):
         .mode("overwrite")
         .parquet(output_path)
     )
+
+    print("parquet generated.")
