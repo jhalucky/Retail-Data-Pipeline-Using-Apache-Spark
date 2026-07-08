@@ -15,6 +15,7 @@ from src.transform.joins import create_sales_dataframe
 from src.transform.create_fact_sales import create_fact_sales
 from src.analytics.revenue import revenue_by_category, revenue_by_state, revenue_by_month
 from src.load.write_parquet import write_parquet
+from src.extract.read_parquet import read_parquet
 from schemas import CUSTOMER_SCHEMA, ORDER_ITEM_SCHEMA, ORDER_SCHEMA, PAYMENT_SCHEMA, PRODUCT_SCHEMA
 
 
@@ -72,8 +73,9 @@ sales_df = create_sales_dataframe(
 # category_revenue_df = revenue_by_state(sales_df)
 # category_revenue_df = revenue_by_month(sales_df)
 fact_sales_df = create_fact_sales(sales_df)
-show_rows(fact_sales_df)
-# write_parquet(fact_sales_df, "data/processed/fact_sales")
-write_parquet(customer_df, "data/processed/customers")
-write_parquet(product_df, "data/processed/products")
+# show_rows(fact_sales_df)
+# # write_parquet(fact_sales_df, "data/processed/fact_sales")
+# write_parquet(customer_df, "data/processed/customers")
+# write_parquet(product_df, "data/processed/products")
+fact_sales_df = read_parquet(spark, "data/processed/fact_sales")
 spark.stop()
