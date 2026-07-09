@@ -75,10 +75,11 @@ sales_df = create_sales_dataframe(
 # category_revenue_df = revenue_by_month(sales_df)
 fact_sales_df = create_fact_sales(sales_df)
 # show_rows(fact_sales_df)
-# # write_parquet(fact_sales_df, "data/processed/fact_sales")
+
 # write_parquet(customer_df, "data/processed/customers")
 # write_parquet(product_df, "data/processed/products")
 # fact_sales_df = read_parquet(spark, "data/processed/fact_sales")
 fact_sales_df = add_partition_columns(fact_sales_df)
-show_rows(fact_sales_df)
+write_parquet(fact_sales_df, "data/processed/fact_sales")
+# show_rows(fact_sales_df)
 spark.stop()
