@@ -300,6 +300,6 @@ After completing this project, I learned:
 
 GitHub: https://github.com/jhalucky
 
-LinkedIn: *(Add your LinkedIn profile)*
+LinkedIn: https://www.linkedin.com/in/theluckyjha
 
 ---
